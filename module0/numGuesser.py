@@ -37,3 +37,22 @@ def game_core_v2(number):
 
 score_game(game_core_v1)
 score_game(game_core_v2)
+
+def game_core_v3(number):
+    '''Делим область поиска пополам, соответственно, каждый раз исключаем половину возможных цифр'''
+    count = 1
+    divide = 50
+    range1 = list(range(1,50))
+    range2 = list(range(51,101))
+    while number != divide:
+        count+=1
+        if number > divide:
+            a = 100-round(len(range2)/2)
+            newRange2 = list(range(a,))
+        elif number < divide:
+            round(len(range1)/2)
+    return(count) # выход из цикла, если угадали
+
+def numDivider(num):
+    return num / 2
+
