@@ -50,8 +50,12 @@ def game_core_v3(number):
     while (first < last) and (answer != number): #Пока первое число меньше, чем последнее и ответ не угадан, продолжаем поиск
         count += 1
         mid = (first + last) // 2 # находим середину
-        if A[mid] == number:
-            answer = mid+1
+        if A[mid-1] == number: #т.к. в некоторых случаях возможны ситуации, что ответ является first или last, делаем на это проверку
+            answer = mid
+        elif A[first - 1] == number:
+            answer = first
+        elif A[last - 1] == number:
+            answer = last
         else:
             if number < A[mid]:
                 last = mid - 1
