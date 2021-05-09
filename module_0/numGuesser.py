@@ -43,8 +43,8 @@ def game_core_v2(number):
 def game_core_v3(number):
     '''Делим область поиска пополам, соответственно, каждый раз исключаем половину возможных цифр'''
     count = 0
-    first = 1
-    last = 100
+    first = a
+    last = b
     answer = -1 #изначально ответ вне диапазона поиска
     A = list(range(a, b+1))
     while (first < last) and (answer != number): #Пока первое число меньше, чем последнее и ответ не угадан, продолжаем поиск
@@ -54,7 +54,7 @@ def game_core_v3(number):
             answer = mid
         elif A[first - 1] == number:
             answer = first
-        elif A[last - 1] == number:
+        elif A[last - 1] == number: #добавление этих elif сократило среднее кол-во попыток с 5 до 4 (20%)
             answer = last
         else:
             if number < A[mid]:
