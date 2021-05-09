@@ -1,12 +1,17 @@
 import numpy as np
 
+#определяем диапазон поиска
+a = 1
+b = 100
+
+
 def game_core_v1(number):
     '''Просто угадываем на random, никак не используя информацию о больше или меньше.
        Функция принимает загаданное число и возвращает число попыток'''
     count = 0
     while True:
         count += 1
-        predict = np.random.randint(1, 101)  # предполагаемое число
+        predict = np.random.randint(a, b+1)  # предполагаемое число
         if number == predict:
             return count  # выход из цикла, если угадали
 
@@ -15,7 +20,7 @@ def score_game(game_core):
     '''Запускаем игру 1000 раз, чтобы узнать, как быстро игра угадывает число'''
     count_ls = []
     np.random.seed(1)  # фиксируем RANDOM SEED, чтобы ваш эксперимент был воспроизводим!
-    random_array = np.random.randint(1, 101, size=(1000))
+    random_array = np.random.randint(a, b+1, size=(1000))
     for number in random_array:
         count_ls.append(game_core(number))
     score = int(np.mean(count_ls))
@@ -26,7 +31,7 @@ def game_core_v2(number):
     '''Сначала устанавливаем любое random число, а потом уменьшаем или увеличиваем его в зависимости от того, больше оно или меньше нужного.
        Функция принимает загаданное число и возвращает число попыток'''
     count = 1
-    predict = np.random.randint(1,101)
+    predict = np.random.randint(a,b+1)
     while number != predict:
         count+=1
         if number > predict:
@@ -35,24 +40,25 @@ def game_core_v2(number):
             predict -= 1
     return(count) # выход из цикла, если угадали
 
-score_game(game_core_v1)
-score_game(game_core_v2)
-
 def game_core_v3(number):
     '''Делим область поиска пополам, соответственно, каждый раз исключаем половину возможных цифр'''
-    count = 1
-    divide = 50
-    range1 = list(range(1,50))
-    range2 = list(range(51,101))
-    while number != divide:
-        count+=1
-        if number > divide:
-            a = 100-round(len(range2)/2)
-            newRange2 = list(range(a,))
-        elif number < divide:
-            round(len(range1)/2)
+    count = 0
+    first = 1
+    last = 100
+    answer = -1 #изначально ответ вне диапазона поиска
+    A = list(range(a, b+1))
+    while (first < last) and (answer != number): #Пока первое число меньше, чем последнее и ответ не угадан, продолжаем поиск
+        count += 1
+        mid = (first + last) // 2 # находим середину
+        if A[mid] == number:
+            answer = mid+1
+        else:
+            if number < A[mid]:
+                last = mid - 1
+            else:
+                first = mid + 1
     return(count) # выход из цикла, если угадали
 
-def numDivider(num):
-    return num / 2
-
+score_game(game_core_v1)
+score_game(game_core_v2)
+score_game(game_core_v3)
