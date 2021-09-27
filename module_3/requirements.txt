@@ -40,6 +40,8 @@ conda-package-handling @ file:///C:/ci/conda-package-handling_1603003327818/work
 conda-verify==3.4.2
 contextlib2==0.6.0.post1
 cryptography @ file:///C:/ci/cryptography_1601046905460/work
+cvxopt==1.2.6
+cvxpy==1.1.15
 cycler==0.10.0
 Cython @ file:///C:/ci/cython_1594829190914/work
 cytoolz==0.11.0
@@ -49,6 +51,7 @@ defusedxml==0.6.0
 diff-match-patch @ file:///tmp/build/80754af9/diff-match-patch_1594828741838/work
 distributed @ file:///C:/ci/distributed_1605066635297/work
 docutils==0.16
+ecos==2.0.7.post1
 entrypoints==0.3
 et-xmlfile==1.0.1
 fastcache==1.1.0
@@ -123,6 +126,7 @@ numpy @ file:///C:/ci/numpy_and_numpy_base_1603466732592/work
 numpydoc @ file:///tmp/build/80754af9/numpydoc_1605117425582/work
 olefile==0.46
 openpyxl @ file:///tmp/build/80754af9/openpyxl_1598113097404/work
+osqp==0.6.2.post0
 packaging==20.4
 pandas @ file:///C:/ci/pandas_1602083338010/work
 pandocfilters @ file:///C:/ci/pandocfilters_1605102497129/work
@@ -171,6 +175,7 @@ pywinpty==0.5.7
 PyYAML==5.3.1
 pyzmq==19.0.2
 QDarkStyle==2.8.1
+qdldl==0.1.5.post0
 QtAwesome @ file:///tmp/build/80754af9/qtawesome_1602272867890/work
 qtconsole @ file:///tmp/build/80754af9/qtconsole_1600870028330/work
 QtPy==1.9.0
@@ -182,6 +187,7 @@ ruamel-yaml==0.15.87
 scikit-image==0.17.2
 scikit-learn @ file:///C:/ci/scikit-learn_1598377018496/work
 scipy @ file:///C:/ci/scipy_1604596260408/work
+scs==2.1.4
 seaborn @ file:///tmp/build/80754af9/seaborn_1600553570093/work
 Send2Trash==1.5.0
 simplegeneric==0.8.1
