@@ -5,3 +5,4 @@
 **module_3** - First ML model, EDA + RandomForestRegressor implementation.  
 **module_4** - Credit scoring model, LogisticRegression + overfitting, underfitting.  
 **module_5** - Car price prediction, Data parsing from auto.ru & EDA+ML.
+**module_6** - Recommender Systems, LightFM.
