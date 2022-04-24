@@ -6,3 +6,4 @@
 **module_4** - Credit scoring model, LogisticRegression + overfitting, underfitting.  
 **module_5** - Car price prediction, Data parsing from auto.ru & EDA+ML.  
 **module_6** - Recommender Systems, LightFM.
+**module_7** - Car classification, EfficientNetB2 + Xception
