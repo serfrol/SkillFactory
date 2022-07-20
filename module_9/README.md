@@ -2,6 +2,8 @@
 
 Purpose of this project is to create a model that predicts toy's price based on it's description, customers' review, category, weight and other features.
 The business puprose of this project could be buying toys that have lower price than it should be and then selling those toys for a higher price.  
+  
+Evaluation metric: **RMSE**
 
 ## Features
 - **price** - Target feature
