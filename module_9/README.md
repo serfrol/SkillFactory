@@ -29,6 +29,6 @@ Naive model to get first prediction
 - ### EDA
 Statistical analysis of all columns
 - ### Text Analysis
-Analysis of text columns, tokenization, lemmatization, sentiment analysis
+Analysis of text columns, tokenization, lemmatization, sentiment analysis, text embeddings as features
 - ### ML & DL
 Usage of different ML models (RandomForestRegressor, CatBoost, ...), NLP for text columns, blending
